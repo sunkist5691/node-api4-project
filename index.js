@@ -1,10 +1,11 @@
+require('dotenv').config({path: __dirname + '/.env'})
+
 const express = require('express')
 
 const server = express()
 
 server.use(express.json())
 
-require('dotenv').config()
 
 const port = process.env.PORT || 5000
 
