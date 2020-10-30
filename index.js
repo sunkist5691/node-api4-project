@@ -6,14 +6,15 @@ const server = express()
 
 server.use(express.json())
 
+const port = process.env.PORT || 5000
+
 server.get('/api', (req, res) => {
 
    const message = process.env.MESSAGE
 
-   res.status(201).json({ message })
+   res.status(200).json({ message })
 })
 
-const port = process.env.PORT || 5000
 
 server.listen(port, () => {
    console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
