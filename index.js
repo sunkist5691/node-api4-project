@@ -1,10 +1,10 @@
 require('dotenv').config()
 
-const express = require('express')
+import express, { json } from 'express'
 
 const server = express()
 
-server.use(express.json())
+server.use(json())
 
 const port = process.env.PORT || 5000
 
